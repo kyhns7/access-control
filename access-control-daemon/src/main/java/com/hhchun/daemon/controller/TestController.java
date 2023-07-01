@@ -1,4 +1,4 @@
-package com.hhchun.access.controller;
+package com.hhchun.daemon.controller;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;

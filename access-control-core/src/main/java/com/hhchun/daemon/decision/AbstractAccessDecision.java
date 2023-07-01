@@ -1,10 +1,10 @@
-package com.hhchun.access.decision;
+package com.hhchun.daemon.decision;
 
-import com.hhchun.access.provider.Permission;
-import com.hhchun.access.provider.SubjectOwnedPermissionsProvider;
-import com.hhchun.access.provider.TargetAccessiblePermissionsProvider;
+import com.google.common.base.Preconditions;
+import com.hhchun.daemon.provider.Permission;
+import com.hhchun.daemon.provider.SubjectOwnedPermissionsProvider;
+import com.hhchun.daemon.provider.TargetAccessiblePermissionsProvider;
 
-import javax.validation.constraints.NotNull;
 import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
@@ -19,14 +19,10 @@ public class AbstractAccessDecision implements AccessDecision {
      */
     protected final TargetAccessiblePermissionsProvider tap;
 
-    public AbstractAccessDecision(@NotNull final SubjectOwnedPermissionsProvider sop,
-                                  @NotNull final TargetAccessiblePermissionsProvider tap) throws IllegalArgumentException {
-        if (sop == null) {
-            throw new IllegalArgumentException("sop == null!");
-        }
-        if (tap == null) {
-            throw new IllegalArgumentException("tap == null!");
-        }
+    public AbstractAccessDecision(final SubjectOwnedPermissionsProvider sop,
+                                  final TargetAccessiblePermissionsProvider tap) throws IllegalArgumentException {
+        Preconditions.checkArgument(sop != null, "sop == null!");
+        Preconditions.checkArgument(tap != null, "tap == null!");
         this.sop = sop;
         this.tap = tap;
     }

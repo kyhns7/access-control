@@ -1,4 +1,4 @@
-package com.hhchun.access.denied;
+package com.hhchun.daemon.denied;
 
 /**
  * 访问拒绝器

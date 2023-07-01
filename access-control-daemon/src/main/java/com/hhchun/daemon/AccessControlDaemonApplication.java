@@ -1,11 +1,11 @@
-package com.hhchun.access;
+package com.hhchun.daemon;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class AccessControlApplication {
+public class AccessControlDaemonApplication {
     public static void main(String[] args) {
-        SpringApplication.run(AccessControlApplication.class, args);
+        SpringApplication.run(AccessControlDaemonApplication.class, args);
     }
 }
