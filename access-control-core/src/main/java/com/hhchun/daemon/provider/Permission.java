@@ -12,10 +12,6 @@ public class Permission {
         this.symbol = symbol;
     }
 
-    public String getSymbol() {
-        return symbol;
-    }
-
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
