@@ -1,10 +1,8 @@
 package com.hhchun.daemon.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import  com.hhchun.daemon.common.utils.PageResult;
 import com.hhchun.daemon.entity.domain.PermissionCategoryEntity;
 
-import java.util.Map;
 
 /**
  * 权限类别/分类
