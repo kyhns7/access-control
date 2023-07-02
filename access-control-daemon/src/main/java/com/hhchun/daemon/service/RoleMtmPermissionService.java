@@ -1,10 +1,7 @@
 package com.hhchun.daemon.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import  com.hhchun.daemon.common.utils.PageResult;
 import com.hhchun.daemon.entity.domain.RoleMtmPermissionEntity;
-
-import java.util.Map;
 
 /**
  * 角色关联权限(多对多)

@@ -1,10 +1,7 @@
 package com.hhchun.daemon.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
-import  com.hhchun.daemon.common.utils.PageResult;
 import com.hhchun.daemon.entity.domain.DaemonUserMtmRoleEntity;
-
-import java.util.Map;
 
 /**
  * 后台用户关联角色(多对多)
