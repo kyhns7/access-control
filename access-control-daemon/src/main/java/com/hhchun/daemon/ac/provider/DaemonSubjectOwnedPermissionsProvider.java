@@ -1,5 +1,7 @@
-package com.hhchun.daemon.provider;
+package com.hhchun.daemon.ac.provider;
 
+import com.hhchun.daemon.provider.Permission;
+import com.hhchun.daemon.provider.SubjectOwnedPermissionsProvider;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
@@ -10,12 +12,12 @@ import java.util.List;
 import java.util.Objects;
 
 @Slf4j
-public class DaemonTargetAccessiblePermissionsProvider implements TargetAccessiblePermissionsProvider {
+public class DaemonSubjectOwnedPermissionsProvider implements SubjectOwnedPermissionsProvider {
 
     @Override
     public List<Permission> provide() {
         HttpServletRequest request = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
         log.info("request：{}", request);
-        return Arrays.asList(new Permission("wx"), new Permission("member"));
+        return Arrays.asList(new Permission("admin"), new Permission("worker"));
     }
 }

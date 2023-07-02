@@ -9,3 +9,8 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/access_control?useAffectedRows=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
       username: root
       password: 123456
+wx:
+  miniapp:
+    appid: wx53e0f7f3f8f16580
+    secret: 9aa25663f5f2ae290d05ff82670660ae
+    env-version: trial

@@ -1,5 +1,7 @@
 package com.hhchun.daemon.config;
 
+import com.hhchun.daemon.ac.provider.DaemonSubjectOwnedPermissionsProvider;
+import com.hhchun.daemon.ac.provider.DaemonTargetAccessiblePermissionsProvider;
 import com.hhchun.daemon.annotation.EnableAccessControl;
 import com.hhchun.daemon.provider.*;
 import org.springframework.context.annotation.Bean;
