@@ -5,7 +5,7 @@ public enum ResultCodeConstant {
     SUCCESS(0, "成功"),
     ERROR(500, "系统错误"),
     PERMISSION(403, "无访问权限"),
-    ARGUMENT_NOT_VALID(400, "参数无效"),
+    ARGUMENT_ERROR(400, "参数错误"),
     ILLEGAL_CONDITION(410, "非法条件");
 
     ResultCodeConstant(Integer code, String message) {

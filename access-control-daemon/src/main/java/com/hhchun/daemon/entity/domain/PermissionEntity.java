@@ -1,11 +1,13 @@
 package com.hhchun.daemon.entity.domain;
 
+import com.baomidou.mybatisplus.annotation.FieldFill;
+import com.baomidou.mybatisplus.annotation.TableField;
 import com.baomidou.mybatisplus.annotation.TableId;
 import com.baomidou.mybatisplus.annotation.TableName;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import lombok.Data;
 
 /**
  * 权限
@@ -31,10 +33,12 @@ public class PermissionEntity implements Serializable {
 	/**
 	 * 创建时间
 	 */
+	@TableField(fill = FieldFill.INSERT)
 	private LocalDateTime createTime;
 	/**
 	 * 修改时间
 	 */
+	@TableField(fill = FieldFill.UPDATE)
 	private LocalDateTime updateTime;
 	/**
 	 * 权限标识
@@ -47,7 +51,7 @@ public class PermissionEntity implements Serializable {
 	/**
 	 * 描述/备注
 	 */
-	private String describe;
+	private String des;
 	/**
 	 * 权限主体对象
 	 */

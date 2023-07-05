@@ -12,5 +12,6 @@ import com.hhchun.daemon.entity.domain.DaemonUserEntity;
  */
 public interface DaemonUserService extends IService<DaemonUserEntity> {
 
+    DaemonUserEntity getDaemonUserById(Long daemonUserId);
 }
 

@@ -20,11 +20,15 @@ public class PageArguments {
     // 默认每页记录数
     public static final long DEFAULT_PAGE_SIZE = 10L;
 
-    public <T> IPage<T> getPage(Class<T> T) {
-        if (currPage <= 0) {
+    public <T> IPage<T> getPage() {
+        return getPage(null);
+    }
+
+    public <T> IPage<T> getPage(Class<T> c) {
+        if (currPage == null || currPage <= 0) {
             currPage = DEFAULT_CURR_PAGE;
         }
-        if (pageSize <= 0) {
+        if (pageSize == null || pageSize <= 0) {
             pageSize = DEFAULT_PAGE_SIZE;
         }
         return new Page<>(currPage, pageSize);

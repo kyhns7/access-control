@@ -9,6 +9,14 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/access_control?useAffectedRows=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai&characterEncoding=utf-8
       username: root
       password: 123456
+  redis:
+    redisson:
+      config: |
+        singleServerConfig:
+          timeout: 10000
+          address: redis://localhost:6379
+        codec: !<org.redisson.codec.JsonJacksonCodec> {}
+#        codec: !<org.redisson.codec.Kryo5Codec> {}
 wx:
   miniapp:
     appid: wx53e0f7f3f8f16580

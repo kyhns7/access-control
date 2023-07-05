@@ -25,10 +25,11 @@ public class CustomExceptionControllerAdvice {
     @ExceptionHandler(value = MethodArgumentNotValidException.class)
     public R<?> methodArgumentNotValidExceptionHandler(MethodArgumentNotValidException e) {
         BindingResult result = e.getBindingResult();
-        List<String> errorInfos = result.getFieldErrors().stream().map(DefaultMessageSourceResolvable::getDefaultMessage).collect(Collectors.toList());
-        String errorInfo = StringUtils.collectionToDelimitedString(errorInfos, "\n");
-        log.info(errorInfo);
-        return R.error(ResultCodeConstant.ARGUMENT_NOT_VALID.getCode(), errorInfo);
+        List<String> errorInfos = result.getFieldErrors().stream()
+                .map(DefaultMessageSourceResolvable::getDefaultMessage).collect(Collectors.toList());
+        String error = StringUtils.collectionToDelimitedString(errorInfos, "\n");
+        log.info(error);
+        return R.error(ResultCodeConstant.ARGUMENT_ERROR.getCode(), error);
     }
 
     @ExceptionHandler(value = IllegalConditionException.class)
@@ -41,7 +42,7 @@ public class CustomExceptionControllerAdvice {
     @ExceptionHandler(value = InvalidArgumentException.class)
     public R<?> invalidArgumentExceptionHandler(InvalidArgumentException e) {
         log.info(e.getMessage());
-        return R.error(ResultCodeConstant.ARGUMENT_NOT_VALID.getCode(), e.getMessage());
+        return R.error(ResultCodeConstant.ARGUMENT_ERROR.getCode(), e.getMessage());
     }
 
     @ExceptionHandler(value = UnknownErrorException.class)

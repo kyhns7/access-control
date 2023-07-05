@@ -18,6 +18,6 @@ public class DaemonTargetAccessiblePermissionsProvider implements TargetAccessib
     public List<Permission> provide() {
         HttpServletRequest request = ((ServletRequestAttributes) Objects.requireNonNull(RequestContextHolder.getRequestAttributes())).getRequest();
         log.info("request：{}", request);
-        return Arrays.asList(new Permission("wx"), new Permission("member"));
+        return Arrays.asList(new Permission("admin"), new Permission("member"));
     }
 }
