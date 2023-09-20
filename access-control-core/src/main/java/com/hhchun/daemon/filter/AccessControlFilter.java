@@ -12,6 +12,10 @@ import java.io.IOException;
  */
 public class AccessControlFilter implements Filter {
     /**
+     * 注册顺序
+     */
+    public static final int FILTER_REGISTRATION_ORDER = Integer.MAX_VALUE;
+    /**
      * 访问决策器
      */
     private final AccessDecision accessDecision;

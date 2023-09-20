@@ -14,7 +14,7 @@ spring:
       config: |
         singleServerConfig:
           timeout: 10000
-          address: redis://localhost:6379
+          address: redis://192.168.31.111:6379
         codec: !<org.redisson.codec.JsonJacksonCodec> {}
 #        codec: !<org.redisson.codec.Kryo5Codec> {}
 wx:

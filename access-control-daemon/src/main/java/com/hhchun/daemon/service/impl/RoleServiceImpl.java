@@ -80,14 +80,12 @@ public class RoleServiceImpl extends ServiceImpl<RoleDao, RoleEntity> implements
         String symbol = searchDto.getSymbol();
         String name = searchDto.getName();
         String des = searchDto.getDes();
-        Integer def = searchDto.getDef();
         LambdaQueryWrapper<RoleEntity> wrapper = new LambdaQueryWrapper<>();
         wrapper.orderByDesc(RoleEntity::getCreateTime);
         wrapper.eq(roleId != null, RoleEntity::getId, roleId);
         wrapper.like(StringUtils.hasLength(symbol), RoleEntity::getSymbol, symbol);
         wrapper.like(StringUtils.hasLength(name), RoleEntity::getName, name);
         wrapper.like(StringUtils.hasLength(des), RoleEntity::getDes, des);
-        wrapper.eq(def != null, RoleEntity::getDef, def);
         IPage<RoleEntity> page = page(searchDto.getPage(), wrapper);
         List<RoleVo> roleVos = page.getRecords().stream().map(role -> {
             RoleVo roleVo = new RoleVo();

@@ -4,7 +4,8 @@ package com.hhchun.daemon.common.constant;
 public enum ResultCodeConstant {
     SUCCESS(0, "成功"),
     ERROR(500, "系统错误"),
-    PERMISSION(403, "无访问权限"),
+    ACCESS_DENIED(403, "访问被拒绝"),
+    AUTHENTICATION_ERROR(401, "身份认证错误"),
     ARGUMENT_ERROR(400, "参数错误"),
     ILLEGAL_CONDITION(410, "非法条件");
 

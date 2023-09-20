@@ -21,7 +21,6 @@
         r.`symbol` AS `role_symbol`,
         r.`name` AS `role_name`,
         r.`des` AS `role_des`,
-        r.`def` AS `role_def`,
 
         p.`id` AS `permission_id`,
         p.`symbol` AS `permission_symbol`,

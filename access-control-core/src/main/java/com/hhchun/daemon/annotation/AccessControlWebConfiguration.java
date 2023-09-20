@@ -45,8 +45,8 @@ public class AccessControlWebConfiguration {
         AccessControlFilter accessControlFilter = new AccessControlFilter(accessDecision, accessDenied);
         registration.setFilter(accessControlFilter);
         registration.addUrlPatterns("/*");
-        registration.setName(AccessControlFilter.class.getName());
-        registration.setOrder(Integer.MAX_VALUE);
+        registration.setName(AccessControlFilter.class.getName() + "RegistrationBean");
+        registration.setOrder(AccessControlFilter.FILTER_REGISTRATION_ORDER);
         return registration;
     }
 

@@ -20,9 +20,6 @@ public class AffirmativeAccessDecision extends AbstractAccessDecision {
     public boolean decide() {
         final List<Permission> subjectOwnedPermissions = Optional.ofNullable(sop.provide()).orElse(Collections.emptyList());
         final List<Permission> targetAccessiblePermissions = Optional.ofNullable(tap.provide()).orElse(Collections.emptyList());
-        if (targetAccessiblePermissions.isEmpty()) {
-            return true;
-        }
         for (Permission targetAccessiblePermission : targetAccessiblePermissions) {
             if (subjectOwnedPermissions.contains(targetAccessiblePermission)) {
                 return true;

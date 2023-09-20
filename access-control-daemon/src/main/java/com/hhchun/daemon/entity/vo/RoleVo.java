@@ -42,8 +42,4 @@ public class RoleVo implements Serializable {
      * 描述/备注
      */
     private String des;
-    /**
-     * 默认角色,0-否、1-是
-     */
-    private Integer def;
 }

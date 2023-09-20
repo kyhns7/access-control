@@ -1,7 +1,6 @@
 package com.hhchun.daemon.entity.dto;
 
 import com.hhchun.daemon.common.utils.PageArguments;
-import com.hhchun.daemon.common.validation.ListValue;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
 
@@ -34,9 +33,4 @@ public class RoleSearchDto extends PageArguments implements Serializable {
      * 描述/备注
      */
     private String des;
-    /**
-     * 默认角色,0-否、1-是
-     */
-    @ListValue(values = {"0", "1"}, message = "默认角色错误")
-    private Integer def;
 }

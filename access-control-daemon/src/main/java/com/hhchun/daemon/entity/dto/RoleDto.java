@@ -1,7 +1,7 @@
 package com.hhchun.daemon.entity.dto;
 
-import com.hhchun.daemon.common.constant.ValidationConstant.*;
-import com.hhchun.daemon.common.validation.ListValue;
+import com.hhchun.daemon.common.constant.ValidationConstant.ADD;
+import com.hhchun.daemon.common.constant.ValidationConstant.UPDATE;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
@@ -37,9 +37,4 @@ public class RoleDto implements Serializable {
      * 描述/备注
      */
     private String des;
-    /**
-     * 默认角色,0-否、1-是
-     */
-    @ListValue(groups = {ADD.class, UPDATE.class}, values = {"0", "1"}, message = "默认角色错误")
-    private Integer def;
 }

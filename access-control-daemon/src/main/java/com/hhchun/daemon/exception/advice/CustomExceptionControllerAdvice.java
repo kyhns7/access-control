@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 
 @Slf4j
 @RestControllerAdvice
-@Order(Integer.MAX_VALUE - 2)
+@Order(Integer.MAX_VALUE - 1)
 public class CustomExceptionControllerAdvice {
 
     @ExceptionHandler(value = MethodArgumentNotValidException.class)

@@ -41,18 +41,6 @@ public class DaemonUserEntity implements Serializable {
 	@TableField(fill = FieldFill.UPDATE)
 	private LocalDateTime updateTime;
 	/**
-	 * 用户名
-	 */
-	private String username;
-	/**
-	 * 手机号
-	 */
-	private String phone;
-	/**
-	 * 密码
-	 */
-	private String password;
-	/**
 	 * 微信openid
 	 */
 	private String openid;
