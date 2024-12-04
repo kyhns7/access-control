@@ -10,7 +10,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>access-control-core</module>
-        <module>access-control-daemon</module>
+        <module>access-control-rbac</module>
     </modules>
 
     <dependencyManagement>
@@ -53,17 +53,6 @@
                 <version>32.0.1-jre</version>
             </dependency>
 
-            <dependency>
-                <groupId>com.github.binarywang</groupId>
-                <artifactId>weixin-java-miniapp</artifactId>
-                <version>4.4.0</version>
-            </dependency>
-
-            <dependency>
-                <groupId>com.github.binarywang</groupId>
-                <artifactId>weixin-java-pay</artifactId>
-                <version>4.4.0</version>
-            </dependency>
         </dependencies>
     </dependencyManagement>
 
