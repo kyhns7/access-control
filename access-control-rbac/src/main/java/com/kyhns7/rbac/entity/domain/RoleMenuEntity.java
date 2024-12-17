@@ -1,22 +1,23 @@
 package com.kyhns7.rbac.entity.domain;
 
 import com.baomidou.mybatisplus.annotation.*;
+import lombok.Data;
 
 import java.io.Serializable;
 import java.time.LocalDateTime;
-import lombok.Data;
 
 /**
- * 用户
+ * 角色关联菜单(多对多)
  * 
  * @author kyhns7
  * @email kyhns7@outlook.com
  * @date 2023-07-03 06:53:50
  */
 @Data
-@TableName("ac_user")
-public class UserEntity implements Serializable {
+@TableName("ac_role_mtm_menu")
+public class RoleMenuEntity implements Serializable {
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * id
 	 */
@@ -36,4 +37,13 @@ public class UserEntity implements Serializable {
 	 */
 	@TableField(fill = FieldFill.UPDATE)
 	private LocalDateTime updateTime;
+	/**
+	 * 角色id
+	 */
+	private Long roleId;
+	/**
+	 * 菜单id
+	 */
+	private Long menuId;
+
 }

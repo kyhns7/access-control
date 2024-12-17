@@ -6,10 +6,10 @@ import com.kyhns7.rbac.entity.domain.UserRoleEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 后台用户关联角色(多对多)
+ * 用户关联角色(多对多)
  * 
- * @author hhchun
- * @email 12487489@qq.com
+ * @author kyhns7
+ * @email kyhns7@outlook.com
  * @date 2023-07-03 06:53:50
  */
 @Mapper

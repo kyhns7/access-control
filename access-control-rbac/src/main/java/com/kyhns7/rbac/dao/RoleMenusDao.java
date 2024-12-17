@@ -1,7 +1,7 @@
 package com.kyhns7.rbac.dao;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-import com.kyhns7.rbac.entity.domain.RolePermissionEntity;
+import com.kyhns7.rbac.entity.domain.RoleMenuEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -12,6 +12,6 @@ import org.apache.ibatis.annotations.Mapper;
  * @date 2023-07-03 06:53:50
  */
 @Mapper
-public interface RolePermissionDao extends BaseMapper<RolePermissionEntity> {
+public interface RoleMenusDao extends BaseMapper<RoleMenuEntity> {
 
 }

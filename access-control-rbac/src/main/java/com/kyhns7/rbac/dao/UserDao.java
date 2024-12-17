@@ -5,13 +5,13 @@ import com.kyhns7.rbac.entity.domain.UserEntity;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
- * 后台用户
+ * 用户
  * 
- * @author hhchun
- * @email 12487489@qq.com
+ * @author kyhns7
+ * @email kyhns7@outlook.com
  * @date 2023-07-03 06:53:50
  */
 @Mapper
 public interface UserDao extends BaseMapper<UserEntity> {
-
+    
 }
