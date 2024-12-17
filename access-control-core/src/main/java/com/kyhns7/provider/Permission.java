@@ -4,7 +4,7 @@ import java.util.Objects;
 
 public class Permission {
     /**
-     * 权限的记号标识
+     * 权限的标识
      */
     private final String symbol;
 

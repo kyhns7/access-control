@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 
 
 @Configuration
-@EnableWebAccessControl
+//@EnableWebAccessControl
 @ComponentScan({"com.kyhns7.rbac"})
 public class RbacAccessControlConfiguration {
 
