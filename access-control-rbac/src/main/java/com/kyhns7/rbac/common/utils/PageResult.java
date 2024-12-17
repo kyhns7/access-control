@@ -56,8 +56,8 @@ public class PageResult<T> {
         this.list = Lists.newArrayList();
         this.totalCount = 0L;
         this.totalPage = 0L;
-        this.pageSize = PageArguments.DEFAULT_PAGE_SIZE;
-        this.currPage = PageArguments.DEFAULT_CURR_PAGE;
+        this.pageSize = PageParams.DEFAULT_PAGE_SIZE;
+        this.currPage = PageParams.DEFAULT_CURR_PAGE;
     }
 
     public static <T> PageResult<T> convert(IPage<?> page, List<T> list) {
